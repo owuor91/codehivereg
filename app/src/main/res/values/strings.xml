@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">Codehive Reg</string>
+  <string name="register">Register</string>
+  <string name="name">Name</string>
+  <string name="date_of_birth">Date Of Birth</string>
+  <string name="phone">Phone</string>
 </resources>
