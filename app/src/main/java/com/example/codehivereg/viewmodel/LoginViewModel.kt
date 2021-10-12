@@ -6,10 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.example.codehivereg.models.LoginRequest
 import com.example.codehivereg.models.LoginResponse
 import com.example.codehivereg.repository.UserRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class LoginViewModel: ViewModel() {
-  var userRepository = UserRepository()
+@HiltViewModel
+class LoginViewModel @Inject constructor(var userRepository: UserRepository): ViewModel() {
   var loginLiveData = MutableLiveData<LoginResponse>()
   var errorLiveData = MutableLiveData<String>()
   

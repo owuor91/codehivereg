@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.codehivereg.models.Course
+import javax.inject.Inject
 
-class CoursesAdapter(var courseList: List<Course>): RecyclerView.Adapter<CoursesViewHolder>() {
+class CoursesAdapter @Inject constructor(var courseList: List<Course>): RecyclerView.Adapter<CoursesViewHolder>() {
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesViewHolder {
     var itemView = LayoutInflater.from(parent.context)
         .inflate(R.layout.course_list_item, parent, false)

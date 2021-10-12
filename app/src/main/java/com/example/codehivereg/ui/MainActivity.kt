@@ -10,16 +10,12 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.codehivereg.Constants
-import com.example.codehivereg.api.ApiClient
-import com.example.codehivereg.api.ApiInterface
 import com.example.codehivereg.databinding.ActivityMainBinding
 import com.example.codehivereg.models.RegistrationRequest
-import com.example.codehivereg.models.RegistrationResponse
 import com.example.codehivereg.viewmodel.UserViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
   lateinit var binding: ActivityMainBinding
   val userViewModel: UserViewModel by viewModels()

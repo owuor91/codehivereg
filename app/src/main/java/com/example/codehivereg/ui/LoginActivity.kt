@@ -14,7 +14,9 @@ import com.example.codehivereg.databinding.ActivityLoginBinding
 import com.example.codehivereg.models.LoginRequest
 import com.example.codehivereg.models.LoginResponse
 import com.example.codehivereg.viewmodel.LoginViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
   lateinit var binding: ActivityLoginBinding
   val loginViewModel: LoginViewModel by viewModels()

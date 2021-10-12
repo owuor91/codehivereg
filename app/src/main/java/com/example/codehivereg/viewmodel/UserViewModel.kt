@@ -6,10 +6,13 @@ import androidx.lifecycle.viewModelScope
 import com.example.codehivereg.models.RegistrationRequest
 import com.example.codehivereg.models.RegistrationResponse
 import com.example.codehivereg.repository.UserRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class UserViewModel: ViewModel() {
-  var userRepository = UserRepository()
+@HiltViewModel
+class UserViewModel @Inject constructor(val userRepository: UserRepository): ViewModel() {
+  
   var regResponseLiveData = MutableLiveData<RegistrationResponse>()
   var regErrorLiveData = MutableLiveData<String>()
   

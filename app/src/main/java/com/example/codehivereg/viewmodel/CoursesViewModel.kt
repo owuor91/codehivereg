@@ -6,10 +6,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.codehivereg.models.Course
 import com.example.codehivereg.repository.CoursesRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class CoursesViewModel: ViewModel() {
-  var coursesRepository = CoursesRepository()
+@HiltViewModel
+class CoursesViewModel @Inject constructor(val coursesRepository: CoursesRepository): ViewModel() {
+  
   lateinit var coursesLiveData: LiveData<List<Course>>
   var errorLiveData = MutableLiveData<String>()
   
